@@ -15,7 +15,10 @@
   <p><textarea id="rawDictionaryInput"></textarea></p>
   <p>Please input the table specifications.</p>
   <p><textarea id="rawTableSpecsInput">推導聲母&#9;母&#10;推導韻母&#9;[...音韻地位.最簡描述.slice(1,-1)].reverse().join('')&#10;推導聲調&#9;(音韻地位.屬於('全清 或 次清')?'陰':'陽')+聲</textarea></p>
-  <p><input type="submit" value="Start" onclick="handleSubmit()" /></p>
+  <p>
+    <input type="button" value="Load sample dictionary" onclick="handleLoadSampleDict()" />
+    <input type="submit" value="Start extrapolate" onclick="handleSubmit()" />
+  </p>
   <div id="outputArea"></div>
 </body>
 </html>

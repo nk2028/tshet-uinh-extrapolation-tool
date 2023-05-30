@@ -215,6 +215,12 @@ const handleSubmit = () => {
   }
 };
 
+const handleLoadSampleDict = async () => {
+  const request = await fetch("sample-dict.txt");
+  const response = await request.text();
+  rawDictionaryInput.value = response;
+};
+
 rawDictionaryInput.addEventListener("input", () => {
   const content = rawDictionaryInput.value;
   localStorage.setItem("rawDictionaryInputContent", content);
